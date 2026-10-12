@@ -6,7 +6,7 @@ set.relativenumber = true
 set.number = true
 
 -- indentation
-set.tabstop = 4
+set.softtabstop = 4
 set.shiftwidth = 4
 set.autoindent = true
 set.expandtab = true
