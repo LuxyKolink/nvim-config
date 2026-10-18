@@ -62,3 +62,14 @@ set.wrap = false
 -- no backup
 set.writebackup = false
 
+-- folding options with treesitter
+vim.o.foldmethod = 'expr'
+vim.o.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+vim.o.foldlevel = 99
+
+-- lsp options
+-- rounded borders
+vim.o.winborder = 'rounded'
+-- completion behaviour
+vim.opt.completeopt = { 'menu', 'menuone', 'noinsert', 'popup' }
+
