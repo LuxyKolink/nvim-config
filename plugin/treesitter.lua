@@ -92,6 +92,11 @@ local function select_function(capture)
       vim.api.nvim_replace_termcodes('<Esc>', true, false, true), 'nx', false)
   end
 
+  if ec == 0 and er > sr then
+    er = er - 1
+    ec = #(vim.api.nvim_buf_get_lines(bufnr, er, er + 1, false)[1] or '')
+  end
+
   vim.api.nvim_win_set_cursor(0, { sr + 1, sc })
   vim.cmd('normal! v')
   vim.api.nvim_win_set_cursor(0, { er + 1, math.max(0, ec - 1) })
